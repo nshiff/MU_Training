@@ -20,7 +20,15 @@
 			</customer>
 		</models>
 	</global>
-
+<global>
+<models>
+<sales>
+<rewrite>
+<order_item>Training_Practice_Model_Sales_Order_Item</order_item>
+</rewrite>
+</sales>
+</models>
+</global>
 	<default>
 		<some>
 			<random>

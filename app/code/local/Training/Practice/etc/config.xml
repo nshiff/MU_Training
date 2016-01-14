@@ -5,6 +5,17 @@
 			<version>0.1.0</version>
 		</Training_Practice>
 	</modules>
+
+	<global>
+		<models>
+			<catalog>
+				<rewrite>
+					<product>Training_Practice_Model_Catalog_Product</product>
+				</rewrite>
+			</catalog>
+		</models>
+	</global>
+
 	<default>
 		<some>
 			<random>
@@ -32,4 +43,5 @@
 
 
 </config>
+
 

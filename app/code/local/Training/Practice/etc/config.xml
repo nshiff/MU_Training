@@ -18,17 +18,14 @@
 					<product>Training_Practice_Model_Customer_Customer</product>
 				</rewrite>
 			</customer>
+			<sales>
+				<rewrite>
+					<order_item>Training_Practice_Model_Sales_Order_Item</order_item>
+				</rewrite>
+			</sales>
 		</models>
 	</global>
-<global>
-<models>
-<sales>
-<rewrite>
-<order_item>Training_Practice_Model_Sales_Order_Item</order_item>
-</rewrite>
-</sales>
-</models>
-</global>
+
 	<default>
 		<some>
 			<random>

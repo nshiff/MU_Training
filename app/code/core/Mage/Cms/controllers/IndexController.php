@@ -41,6 +41,53 @@ class Mage_Cms_IndexController extends Mage_Core_Controller_Front_Action
      */
     public function indexAction($coreRoute = null)
     {
+
+	echo('<div style="margin:20px">');
+	echo('Testing...');
+	echo('<br>');
+	echo('<br>');
+	echo('<b>some/random/xpath:</b> ' . Mage::getStoreConfig('some/random/xpath'));
+	echo('<br>');
+	echo('<b>contacts/email/recipient_email:</b> ' . Mage::getStoreConfig('contacts/email/recipient_email'));
+
+	echo('<br>');
+	echo('<b>contacts/email/recipient_email, default:</b> ' . Mage::getStoreConfig('contacts/email/recipient_email', 'default'));
+
+	echo('<br>');
+	echo('<b>contacts/email/recipient_email, french:</b> ' . Mage::getStoreConfig('contacts/email/recipient_email', 'french'));
+
+	echo('<br>');
+	echo('<br>');
+	$store = Mage::app()->getStore();
+	echo('getStore()');
+	echo('<br>');
+	echo('<b>contacts/email/recipient_email:</b> ' . $store->getConfig('contacts/email/recipient_email'));
+
+	echo('<br>');
+	$store = Mage::app()->getStore('french');
+	echo('getStore(\'french\')');
+	echo('<br>');
+	echo('<b>contacts/email/recipient_email:</b> ' . $store->getConfig('contacts/email/recipient_email'));
+
+	echo('<br>');
+	echo('<br>');
+	echo('<b>contacts/contacts/enabled:</b> ');
+	var_dump(Mage::getStoreConfigFlag('contacts/contacts/enabled'));
+
+	echo('<br>');
+	echo('<b>modules/Training_Practice/codePool:</b> ' . Mage::getConfig()->getNode('modules/Training_Practice/codePool'));
+
+	echo('<br>');
+	echo('<b>default/contacts/email/recipient_email:</b> ' . Mage::getConfig()->getNode('default/contacts/email/recipient_email'));
+
+	echo('<br>');
+	echo('<b>stores/french/contacts/email/recipient_email:</b> ' . Mage::getConfig()->getNode('stores/french/contacts/email/recipient_email'));
+
+
+
+	echo('</div>');
+
+
         $pageId = Mage::getStoreConfig(Mage_Cms_Helper_Page::XML_PATH_HOME_PAGE);
         if (!Mage::helper('cms/page')->renderPage($this, $pageId)) {
             $this->_forward('defaultIndex');

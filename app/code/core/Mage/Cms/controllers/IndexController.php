@@ -77,6 +77,14 @@ class Mage_Cms_IndexController extends Mage_Core_Controller_Front_Action
 	echo('<br>');
 	echo('currently ' . get_class(Mage::app()->getLayout()->createBlock('catalog/product_view')));
 
+	echo('<br>');
+	echo('<br>');
+	echo('cms/block');
+	echo('<br>');
+	echo('initially Mage_Cms_Block_Block');
+	echo('<br>');
+	echo('currently ' . get_class(Mage::app()->getLayout()->createBlock('cms/block')));
+
 
 
 

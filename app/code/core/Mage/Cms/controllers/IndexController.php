@@ -41,6 +41,40 @@ class Mage_Cms_IndexController extends Mage_Core_Controller_Front_Action
      */
     public function indexAction($coreRoute = null)
     {
+	echo('<div style="margin:20px">');
+	echo('testing...');
+
+
+	$exampleProduct = Mage::getModel('catalog/product');
+	echo('<br>');
+	echo('$exampleProduct: ' . get_class($exampleProduct));
+
+	echo('<br>');
+	echo('customer/customer: ' . get_class(Mage::getModel('customer/customer')));
+
+	echo('<br>');
+	echo('customer/customer: ' . get_class(Mage::getResourceModel('customer/customer')));
+
+	echo('<br>');
+	echo('core/url: ' . get_class(Mage::helper('core/url')));
+
+	echo('<br>');
+	echo('sales: ' . get_class(Mage::helper('sales')));
+
+	echo('<br>');
+	echo('core/template: ' . get_class(Mage::app()->getLayout()->createBlock('core/template')));
+
+	
+
+
+
+
+
+
+
+
+	echo('</div>');
+
         $pageId = Mage::getStoreConfig(Mage_Cms_Helper_Page::XML_PATH_HOME_PAGE);
         if (!Mage::helper('cms/page')->renderPage($this, $pageId)) {
             $this->_forward('defaultIndex');

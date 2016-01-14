@@ -13,11 +13,6 @@
 					<product>Training_Practice_Model_Catalog_Product</product>
 				</rewrite>
 			</catalog>
-			<customer>
-				<rewrite>
-					<product>Training_Practice_Model_Customer_Customer</product>
-				</rewrite>
-			</customer>
 			<sales>
 				<rewrite>
 					<order_item>Training_Practice_Model_Sales_Order_Item</order_item>

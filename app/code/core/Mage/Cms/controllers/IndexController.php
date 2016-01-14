@@ -55,14 +55,6 @@ class Mage_Cms_IndexController extends Mage_Core_Controller_Front_Action
 
 	echo('<br>');
 	echo('<br>');
-	echo('customer/customer');
-	echo('<br>');
-	echo('initially Mage_Customer_Model_Customer');
-	echo('<br>');
-	echo('currently ' . get_class(Mage::getModel('customer/customer')));
-
-	echo('<br>');
-	echo('<br>');
 	echo('sales/order_item');
 	echo('<br>');
 	echo('initially Mage_Sales_Model_Order_Item');

@@ -31,6 +31,11 @@
 					<product_view>Training_Practice_Block_Catalog_Product_View</product_view>
 				</rewrite>
 			</catalog>
+			<cms>
+				<rewrite>
+					<block>Training_Practice_Block_Cms_Block_Block</block>
+				</rewrite>
+			</cms>
 		</blocks>
 
 	</global>

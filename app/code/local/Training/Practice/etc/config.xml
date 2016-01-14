@@ -18,6 +18,11 @@
 					<order_item>Training_Practice_Model_Sales_Order_Item</order_item>
 				</rewrite>
 			</sales>
+			<customer>
+				<rewrite>
+					<customer>Training_Practice_Model_Customer_Customer</customer>
+				</rewrite>
+			</customer>
 		</models>
 	</global>
 

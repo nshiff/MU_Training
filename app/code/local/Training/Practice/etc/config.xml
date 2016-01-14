@@ -24,6 +24,15 @@
 				</rewrite>
 			</customer>
 		</models>
+
+		<blocks>
+			<catalog>
+				<rewrite>
+					<product_view>Training_Practice_Block_Catalog_Product_View</product_view>
+				</rewrite>
+			</catalog>
+		</blocks>
+
 	</global>
 
 	<default>

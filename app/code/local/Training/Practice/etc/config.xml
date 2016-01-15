@@ -29,19 +29,19 @@
 	</stores>
 
 
-	<frontend>
+	<adminhtml>
 		<events>
 			<catalog_product_load_after>
 				<observers>
 					<training_practice>
-						<type>model</type>
+						<type>disabled</type>	<!-- "model" to enable -->
 						<class>training_practice/observer</class>
 						<method>catalogProductLoadAfter</method>
 					</training_practice>
 				</observers>
 			</catalog_product_load_after>
 		</events>
-	</frontend>
+	</adminhtml>
 
 	<global>
 		<models>

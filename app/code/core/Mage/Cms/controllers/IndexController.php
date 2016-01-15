@@ -43,7 +43,7 @@ class Mage_Cms_IndexController extends Mage_Core_Controller_Front_Action
     {
 
 	echo('<div style="margin:20px">');
-	echo('Testing...');
+	echo('Testing: Section 2 Lesson 8. Class Rewrites');
 
 	echo('<br>');
 	echo('<br>');
@@ -84,6 +84,14 @@ class Mage_Cms_IndexController extends Mage_Core_Controller_Front_Action
 	echo('initially Mage_Cms_Block_Block');
 	echo('<br>');
 	echo('currently ' . get_class(Mage::app()->getLayout()->createBlock('cms/block')));
+
+	echo('<br>');
+	echo('<br>');
+	echo('customer/address');
+	echo('<br>');
+	echo('initially Mage_Customer_Helper_Address');
+	echo('<br>');
+	echo('currently ' . get_class(Mage::helper('customer/address')) );
 
 
 

@@ -44,6 +44,11 @@
 					<address>Training_Practice_Helper_Customer_Address</address>
 				</rewrite>
 			</customer>
+			<sales>
+				<rewrite>
+					<data>Training_Practice_Helper_Sales_Data</data>
+				</rewrite>
+			</sales>
 		</helpers>
 
 

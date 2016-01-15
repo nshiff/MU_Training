@@ -93,6 +93,14 @@ class Mage_Cms_IndexController extends Mage_Core_Controller_Front_Action
 	echo('<br>');
 	echo('currently ' . get_class(Mage::helper('customer/address')) );
 
+	echo('<br>');
+	echo('<br>');
+	echo('sales');
+	echo('<br>');
+	echo('initially Mage_Sales_Helper_Data');
+	echo('<br>');
+	echo('currently ' . get_class(Mage::helper('sales')) );
+
 
 
 

@@ -101,6 +101,14 @@ class Mage_Cms_IndexController extends Mage_Core_Controller_Front_Action
 	echo('<br>');
 	echo('currently ' . get_class(Mage::helper('sales')) );
 
+	echo('<br>');
+	echo('<br>');
+	echo('catalog/product');
+	echo('<br>');
+	echo('initially Mage_Catalog_Model_Resource_Product');
+	echo('<br>');
+	echo('currently ' . get_class(Mage::getResourceModel('catalog/product')));
+
 
 
 

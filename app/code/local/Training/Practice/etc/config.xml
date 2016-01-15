@@ -29,6 +29,54 @@
 	</stores>
 
 
+<frontend>
+<events>
+<catalog_product_load_after>
+<observers>
+<training_practice>
+<type>model</type>
+<class>training_practice/observer</class>
+<method>catalogProductLoadAfter</method>
+</training_practice>
+</observers>
+</catalog_product_load_after>
+</events>
+</frontend>
+
+<global>
+<models>
+<training_practice>
+<class>Training_Practice_Model</class>
+</training_practice>
+</models>
+</global>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </config>

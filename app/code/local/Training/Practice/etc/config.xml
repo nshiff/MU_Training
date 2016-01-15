@@ -10,9 +10,14 @@
 		<models>
 			<catalog>
 				<rewrite>
-					<product>Training_Practice_Model_Catalog_Product</product>
+					<product>Training_Practice_Model_Catalog_Resource_Product</product>
 				</rewrite>
 			</catalog>
+			<catalog_resource>
+				<rewrite>
+					<product>Training_Practice_Model_Catalog_Product</product>
+				</rewrite>
+			</catalog_resource>
 			<sales>
 				<rewrite>
 					<order_item>Training_Practice_Model_Sales_Order_Item</order_item>

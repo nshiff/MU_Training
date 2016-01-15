@@ -38,6 +38,20 @@
 			</cms>
 		</blocks>
 
+		<helpers>
+			<customer>
+				<rewrite>
+					<address>Training_Practice_Helper_Customer_Address</address>
+				</rewrite>
+			</customer>
+		</helpers>
+
+
+
+
+
+
+
 	</global>
 
 	<default>
@@ -67,5 +81,6 @@
 
 
 </config>
+
 
 

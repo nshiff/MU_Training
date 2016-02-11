@@ -3,5 +3,6 @@ var/
 media/
 downloader/cache.cfg
 php_errors.log
-app/etc/local.xml  # avoid revealing sensitive info
+app/etc/local.xml  # avoid revealing sensitive login info
 *local.xml
+.idea

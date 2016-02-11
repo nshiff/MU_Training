@@ -232,3 +232,6 @@
         Deny from all
 
     </Files>
+
+## example from Magento U Section 3 Lesson 1. Application Initialization
+SetEnv MAGE_RUN_CODE german	

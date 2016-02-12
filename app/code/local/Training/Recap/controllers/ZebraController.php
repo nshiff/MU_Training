@@ -1,6 +1,6 @@
 <?php
 
-class Training_Routing_ZebraController extends Mage_Core_Controller_Front_Action{
+class Training_Recap_ZebraController extends Mage_Core_Controller_Front_Action{
 
     public function indexAction(){
         $this->getResponse()->setBody('/ / / Hello I\'m a zebra / / /');

@@ -8,3 +8,5 @@ app/etc/local.xml	# avoid revealing sensitive login info
 .idea
 desktop.ini			# windows thumbnails(?)
 includes/src		# in case magento compilation is turned on. don't want to verison generated files.
+desktop.ini
+/includes/src

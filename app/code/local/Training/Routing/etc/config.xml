@@ -16,6 +16,14 @@
 					<frontName>training</frontName>
 				</args>
 			</training_routing>
+			<customer>
+				<args>
+					<modules>
+						<training_routing
+								before="Mage_Customer">Training_Routing_Customer</training_routing>
+					</modules>
+				</args>
+			</customer>
 		</routers>
 	</frontend>
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<modules>
+		<Training_Routing>
+			<version>0.1.0</version>
+		</Training_Routing>
+	</modules>
+
+	<frontend>
+		<routers>
+			<training_routing>
+				<use>standard</use>
+				<args>
+					<module>Training_Routing</module>
+					<frontName>training</frontName>
+				</args>
+			</training_routing>
+		</routers>
+	</frontend>
+
+
+
+</config>
+

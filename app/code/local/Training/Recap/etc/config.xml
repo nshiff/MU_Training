@@ -13,19 +13,30 @@
 				<use>standard</use>
 				<args>
 					<module>Training_Recap</module>
-					<frontName>training</frontName>
+					<frontName>recap</frontName>
 				</args>
 			</training_recap>
-			<customer>
-				<args>
-					<modules>
-						<training_recap
-								before="Mage_Customer">Training_Recap_Customer</training_recap>
-					</modules>
-				</args>
-			</customer>
+
 		</routers>
 	</frontend>
+
+	<global>
+		<models>
+			<training_recap>
+				<class>Training_Recap_Model</class>
+			</training_recap>
+		</models>
+		<blocks>
+			<training_recap>
+				<class>Training_Recap_Block</class>
+			</training_recap>
+		</blocks>
+		<helpers>
+			<training_recap>
+				<class>Training_Recap_Helper</class>
+			</training_recap>
+		</helpers>
+	</global>
 
 
 

@@ -3,8 +3,14 @@
 	<modules>
 		<Training_Recap>
 			<active>true</active>
-			<codePool>local</codePool>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Log/>
+			</depends>
 		</Training_Recap>
+		<Mage_Log>
+			<active>true</active>
+		</Mage_Log>
 	</modules>
 </config>
 

@@ -6,3 +6,5 @@ php_errors.log
 app/etc/local.xml  # avoid revealing sensitive login info
 *local.xml
 .idea
+desktop.ini
+/includes/src

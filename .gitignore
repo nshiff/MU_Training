@@ -4,6 +4,7 @@ media/
 downloader/cache.cfg
 php_errors.log
 app/etc/local.xml  # avoid revealing sensitive login info
+/app/etc/local.xml  # avoid revealing sensitive login info
 .idea
 desktop.ini
 /includes/src

@@ -28,7 +28,7 @@
 /**
  * Template for Mage_Page_Block_Html
  */
- ?>
+?>
 
 <!DOCTYPE html>
 
@@ -45,13 +45,14 @@
 <?php echo $this->getChildHtml('after_body_start') ?>
 <div class="wrapper">
     <?php echo $this->getChildHtml('global_notices') ?>
+
     <div class="page">
         <?php echo $this->getChildHtml('header') ?>
+		<p>Testing: Custom theme for default store</p>
         <div class="main-container col2-right-layout">
-            <div class="main">
-				<h2><?php echo $this->getTemplateFile() ?></h2>
 
-				<?php echo $this->getChildHtml('breadcrumbs') ?>
+            <div class="main">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
                 <div class="col-main">
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>

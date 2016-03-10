@@ -1,9 +1,9 @@
 <?php
 
-class Training_Routing_PracticeController extends Mage_Core_Controller_Front_Action{
+class Training_Routing_ExampleController extends Mage_Core_Controller_Front_Action{
 
     public function indexAction(){
-        $this->getResponse()->setBody('Hello from Practice frontend controller');
+        $this->getResponse()->setBody('Hello from Example frontend controller');
     }
 
     public function pageLayoutXmlAction(){

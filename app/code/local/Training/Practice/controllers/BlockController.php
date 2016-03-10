@@ -22,6 +22,11 @@ class Training_Practice_BlockController extends Mage_Core_Controller_Front_Actio
 
 	}
 
+	public function templateBlockAction(){
+		$block = $this->getLayout()->createBlock('core/template');
+		$block->setTemplate('training/practice/example.phtml');
+		$this->getResponse()->setBody($block->toHtml());;
+	}
 
 }
 

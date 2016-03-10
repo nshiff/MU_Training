@@ -13,7 +13,7 @@
 				<use>standard</use>
 				<args>
 					<module>Training_Practice</module>
-					<frontName>rainbow</frontName>
+					<frontName>render</frontName>
 				</args>
 			</training_practice>
 		</routers>

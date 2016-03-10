@@ -18,7 +18,25 @@
 			</training_practice>
 		</routers>
 	</frontend>
+	<global>
+		<models>
+			<training_practice>
+				<class>Training_Practice_Model</class>
+			</training_practice>
+		</models>
 
+		<blocks>
+			<training_practice>
+				<class>Training_Practice_Block</class>
+			</training_practice>
+		</blocks>
+
+		<helpers>
+			<training_practice>
+				<class>Training_Practice_Helper</class>
+			</training_practice>
+		</helpers>
+	</global>
 
 
 </config>

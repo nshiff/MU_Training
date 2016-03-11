@@ -13,10 +13,20 @@
 				<use>standard</use>
 				<args>
 					<module>Training_Practice</module>
-					<frontName>helloworld</frontName>	<!-- http://homepage.com/helloworld -->
+					<frontName>training</frontName>	<!--	the name is arbitrary
+															but by convention it is the module's name
+															http://homepage.com/training -->
 				</args>
 			</training_practice>
 		</routers>
+		<layout>
+			<updates>
+				<practice module="Training_Practice">
+					<file>practice/layout.xml</file>
+				</practice>
+			</updates>
+		</layout>
+
 	</frontend>
 
 

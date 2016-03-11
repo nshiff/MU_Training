@@ -35,6 +35,17 @@ class Training_Practice_BlockController extends Mage_Core_Controller_Front_Actio
 		->setTemplate('training/practice/registry.phtml');
 		$this->getResponse()->setBody($block->toHtml());
 	}
+
+	public function textListAction(){
+		$listBlock = $this->getLayout()->createBlock('core/text_list');
+		$blockA = $this->getLayout()->createBlock('core/text','block.a')->setText('<p>Example block A.</p>');
+		$blockB = $this->getLayout()->createBlock('core/text','block.b')->setText('<p>Example block B.</p>');
+		$listBlock->insert($blockA)->insert($blockB);
+		$this->getResponse()->setBody($listBlock->toHtml());
+	}
+
+
+
 }
 
 

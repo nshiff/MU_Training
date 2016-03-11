@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+	<modules>
+		<Training_Practice>
+			<version>0.1.0</version>
+		</Training_Practice>
+	</modules>
+
+	<frontend>
+		<routers>
+			<training_practice>
+				<use>standard</use>
+				<args>
+					<module>Training_Practice</module>
+					<frontName>helloworld</frontName>	<!-- http://homepage.com/helloworld -->
+				</args>
+			</training_practice>
+		</routers>
+	</frontend>
+
+
+
+</config>
+

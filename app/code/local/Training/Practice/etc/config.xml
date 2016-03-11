@@ -27,8 +27,13 @@
 
 		<blocks>
 			<training_practice>
-				<class>Training_Practice_Block</class>
+				<class>Training_Practice_Block</class>	<!-- app/code/local/Training/Practice/Block -->
 			</training_practice>
+			<page>
+				<rewrite>
+					<html_breadcrumbs>Training_Practice_Block_Page_Breadcrumbs</html_breadcrumbs>
+				</rewrite>
+			</page>
 		</blocks>
 
 		<helpers>

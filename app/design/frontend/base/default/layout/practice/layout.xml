@@ -1,7 +1,12 @@
 <?xml version="1.0"?>
 <layout>
-	<default>
-		<broken>
-		</broken___>
-	</default>
+  <default>
+    <reference name="content">
+      <block type="core/template" name="new.block" before="-">
+        <action method="setTemplate">
+          <path>practice/one.phtml</path>
+        </action>
+      </block>
+    </reference>
+  </default>
 </layout>

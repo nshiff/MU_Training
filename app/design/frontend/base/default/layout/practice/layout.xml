@@ -47,6 +47,41 @@
 		</reference>
 	</cms_index_index>
 
+	<!--- BEGIN Exercise 5 Step 4: Ensure that you don’t have two poll blocks in the left column-->
+	<default>
+		<update handle="move_poll_to_left"/>
+	</default>
+
+	<catalog_category_layered>
+		<update handle="move_poll_to_left"/>
+	</catalog_category_layered>
+
+	<catalog_category_default>
+		<update handle="move_poll_to_left"/>
+	</catalog_category_default>
+	
+	<move_poll_to_left>
+		<reference name="right">
+			<action method="unsetChild">
+				<alias>right.poll</alias>
+			</action>
+		</reference>
+		<reference name="left">
+			<action method="unsetChild">
+				<alias>right.poll</alias>
+			</action>
+		</reference>
+		<reference name="left">
+			<action method="insert">
+				<name>right.poll</name>
+				<sibling>catalog.leftnav</sibling>
+				<after>0</after>
+			</action>
+		</reference>
+	</move_poll_to_left>
+	<!--- END Exercise 5 Step -->
+
+
 </layout>
 
 

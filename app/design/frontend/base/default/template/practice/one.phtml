@@ -1,3 +1,6 @@
-<div style="background:green; color:white;">
-	<p>This block should display everywhere!</p>
+<?php
+	$_bgColor = $this->hasBackgroundColor() ? "background-color: {$this->getBackgroundColor()};" : '';
+?>
+<div style="<?php echo $_bgColor ?> color:white;">
+	<p>This block should be displayed everywhere!</p>
 </div>

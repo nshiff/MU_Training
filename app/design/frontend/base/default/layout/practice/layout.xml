@@ -1,12 +1,22 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <layout>
-  <default>
-    <reference name="content">
-      <block type="core/template" name="new.block" before="-">
-        <action method="setTemplate">
-          <path>practice/one.phtml</path>
-        </action>
-      </block>
-    </reference>
-  </default>
+    <default>
+        <reference name="content">
+            <block type="core/template" name="new.block" before="-">
+                <action method="setTemplate">
+                    <path>practice/one.phtml</path>
+                </action>
+                <action method="setBackgroundColor">
+                    <value>blue</value>
+                </action>
+            </block>
+        </reference>
+    </default>
+	<catalog_product_view>
+		<reference name="new.block">
+			<action method="setBackgroundColor">
+				<value>red</value>
+			</action>
+		</reference>
+	</catalog_product_view>
 </layout>

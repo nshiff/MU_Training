@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
+
     <default>
         <reference name="content">
             <block type="core/template" name="new.block" before="-">
@@ -12,6 +13,7 @@
             </block>
         </reference>
     </default>
+
 	<catalog_product_view>
 		<reference name="new.block">
 			<action method="setBackgroundColor">
@@ -19,4 +21,14 @@
 			</action>
 		</reference>
 	</catalog_product_view>
+
+	<custom_handle>
+		<block name="customBlock" type="core/text" output="toHtml" >
+			<action method="setText">
+				<text>This is some text.</text>
+			</action>
+		</block>
+	</custom_handle>
+
 </layout>
+

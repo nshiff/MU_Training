@@ -31,5 +31,11 @@ class Training_Practice_PracticeController extends Mage_Core_Controller_Front_Ac
 		$this->getResponse()->setBody($body);
 	}
 
+	public function handleAction()
+	{
+		$this->loadLayout('custom_handle')->renderLayout();
+	}
+
+
 }
 

@@ -39,5 +39,14 @@
 		</reference>
 	</catalog_category_layered>
 
+	<cms_index_index>
+		<reference name="left">
+			<action method="insert">
+				<block>right.poll</block>
+			</action>
+		</reference>
+	</cms_index_index>
+
 </layout>
+
 

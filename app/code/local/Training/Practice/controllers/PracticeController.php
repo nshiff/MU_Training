@@ -15,6 +15,30 @@ class Training_Practice_PracticeController extends Mage_Core_Controller_Front_Ac
 		$this->getResponse()->setBody($body);
 	}
 
+	protected function _displayChildCategories($category){
+		
+		$resource = $category->getResource();
+		
+		if( Mage::helper('catalog/category_flat')->isEnabled() ){
+			$table = $resource->getMainTable();
+		}
+		else{
+			$table = $resource->getEntityTable();
+		}
+		
+		// Retrieve the read adapter to work with the select object
+		$select = $resource->getReadConnection()->select()
+			->from($table, '*')
+			->where('parent_id=?', $category->getId());
+		
+		
+		$this->getResponse()->appendBody("cool" . "\n");
+		
+		
+	}
+	
+	
+	
 	public function rootCategoryListAction(){
 		$stores = Mage::getResourceModel('core/store_collection');
 		$rootIds = $stores->walk('getRootCategoryId');
@@ -31,6 +55,7 @@ class Training_Practice_PracticeController extends Mage_Core_Controller_Front_Ac
 			$this->getResponse()->appendBody($store->getName() . ": ");
 			$category = $cats->getItemById($store->getRootCategoryId());
 			$this->getResponse()->appendBody($category->getName() . "\n");
+			$this->_displayChildCategories($category);
 		}
 	}
 	

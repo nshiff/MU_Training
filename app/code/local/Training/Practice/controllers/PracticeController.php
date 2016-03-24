@@ -15,21 +15,25 @@ class Training_Practice_PracticeController extends Mage_Core_Controller_Front_Ac
 		$this->getResponse()->setBody($body);
 	}
 
-	public function sweetAction(){									// /practice/sweet
-		$body = '';
-		$body .= '-------------------------------------<br>';
-		$body .= ' * * * Things are Sweet * * *<br>';
-		$body .= '-------------------------------------<br>';	
-		$this->getResponse()->setBody($body);
-	}
+	public function rootCategoryListAction(){
+		$stores = Mage::getResourceModel('core/store_collection');
+		$rootIds = $stores->walk('getRootCategoryId');
+		var_dump($rootIds);
+		
+		$cats = Mage::getResourceModel('catalog/category_collection');
+		
+		$cats->addIdFilter($rootIds);
+		$cats->addAttributeToSelect('name');
 
-	public function reallysweetAction(){							// /practice/reallysweet
-		$body = '';
-		$body .= '-------------------------------------<br>';
-		$body .= ' * * * Things are Really Sweet * * *<br>';
-		$body .= '-------------------------------------<br>';	
-		$this->getResponse()->setBody($body);
+		$this->getResponse()->setHeader('Content-Type', 'text/plain');
+		
+		foreach ($stores as $store){
+			$this->getResponse()->appendBody($store->getName() . ": ");
+			$category = $cats->getItemById($store->getRootCategoryId());
+			$this->getResponse()->appendBody($category->getName() . "\n");
+		}
 	}
-
+	
+	
 }
 

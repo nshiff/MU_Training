@@ -232,3 +232,10 @@
         Deny from all
 
     </Files>
+
+
+#if you need to debug
+php_value xdebug.remote_log xdebug.log
+php_value xdebug.remote_host 192.168.1.148
+php_value xdebug.remote_connect_back 0
+php_value xdebug.remote_autostart 1

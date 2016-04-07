@@ -31,6 +31,7 @@ class Training_Practice_PracticeController extends Mage_Core_Controller_Front_Ac
 			$this->getResponse()->appendBody($store->getName() . ": ");
 			$category = $cats->getItemById($store->getRootCategoryId());
 			$this->getResponse()->appendBody($category->getName() . "\n");
+			// Output category tree
 			$this->_displayChildCategories($category);
 		}
 	}
@@ -39,7 +40,7 @@ class Training_Practice_PracticeController extends Mage_Core_Controller_Front_Ac
 
 		$resource = $category->getResource();
 
-		// $table name logic
+		// Different tablename getter for flat vs EAV
 		if( Mage::helper('catalog/category_flat')->isEnabled() ){
 			$table = $resource->getMainTable();
 		}
@@ -52,7 +53,7 @@ class Training_Practice_PracticeController extends Mage_Core_Controller_Front_Ac
 			->from($table, '*')
 			->where('parent_id=?', $category->getId());
 
-		// conditional "name" logic
+		// Join "name" attribute table if necessary
 		if( ! Mage::helper('catalog/category_flat')->isEnabled()){
 			$attribute = $resource->getAttribute('name');
 
@@ -66,16 +67,17 @@ class Training_Practice_PracticeController extends Mage_Core_Controller_Front_Ac
 			);
 		}
 
-
+		// Retrieve results from database
 		$rows = $resource->getReadConnection()->fetchAll($select);
 
+		// Iterate, apply data, and call this method recursively
 		foreach ($rows as $row){
-
 			$childCat = Mage::getModel('catalog/category')->setData($row);
 
 			$output = str_pad("", $childCat->getLevel() * 2, " ") .
 				"{$childCat->getId()} {$childCat->getName()}\n";
 			$this->getResponse()->appendBody($output);
+			$this->_displayChildCategories($childCat);	// recursive call. "we have to go deeper!"
 
 
 

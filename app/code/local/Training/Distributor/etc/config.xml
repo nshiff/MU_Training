@@ -1,0 +1,49 @@
+<config>
+    <global>
+
+        <blocks>
+            <training_distributor>
+                <class>Training_Distributor_Block</class>
+            </training_distributor>
+        </blocks>
+
+
+
+        <helpers>
+            <training_distributor>
+                <class>Training_Distributor_Helper</class>
+            </training_distributor>
+        </helpers>
+
+
+
+        <models>
+            <training_distributor>
+                <class>Training_Distributor_Model</class>
+                <resourceModel>training_distributor_resource</resourceModel>
+            </training_distributor>
+
+
+            <training_distributor_resource>
+                <class>Training_Distributor_Model_Resource</class>
+                <entities>
+                    <distributor>
+                        <table>training_distributor_entity</table>
+                    </distributor>
+                </entities>
+            </training_distributor_resource>
+
+
+
+        </models>
+
+
+
+
+    </global>
+
+
+
+
+
+</config>
